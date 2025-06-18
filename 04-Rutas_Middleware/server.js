@@ -3,13 +3,12 @@ const PORT = 3000;
 
 function logEvents(req, resp, next) {
   const dateTime = new Date();
-  const fecha = dateTime.localTimeString();
-  const tiempo = dateTime.localTimeString();
+  const fecha = dateTime.tolocalDateString();
+  const tiempo = dateTime.tolocalTimeString();
   console.log(`${fecha}-${tiempo} | Solicitud a: ${req.url}`);
   next();
 }
 
-// http://localhost:3000/?name=Barrygon911
 function validarNombre(req, res, next) {
   const url = new URL(req.url, `http://${req.headers.host}`);
   const nombre = url.searchParams.get("name");
@@ -21,11 +20,13 @@ function validarNombre(req, res, next) {
 
 const server = http.createServer((req, res) => {
   logEvents(req, res, () => {
-    if (req.url === "/") {
-      res.end("Welcome Gallegos");
-    } else {
-      res.end("404");
-    }
+    validarNombre(req, res, () => {
+      if (req.url === "/") {
+        res.end("Welcome Gallegos");
+      } else {
+        res.end("404");
+      }
+    })
   });
 });
 

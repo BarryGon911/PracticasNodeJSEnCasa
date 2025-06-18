@@ -18,5 +18,3 @@ inquirer.prompt([
     console.log(saludar(respuestas.nombre));
     console.log(`Tu color favorito es: ${respuestas.color}`);
 });
-
-// console.log(chalk.red(saludar("BarryGon911!")));

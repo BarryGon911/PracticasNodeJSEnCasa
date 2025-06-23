@@ -4,9 +4,10 @@
   "description": "Introducción a ExpressJS",
   "main": "index.js",
   "type": "module",
+  "exports": "./dist/server.js",
   "scripts": {
+    "build": "pkgroll",
     "dev": "nodemon --exec ts-node src/server.ts",
-    "build": "tsc",
     "start": "node dist/server.js"
   },
   "keywords": [],
@@ -15,12 +16,17 @@
   "dependencies": {
     "colors": "^1.4.0",
     "dotenv": "^16.5.0",
-    "express": "^5.1.0"
+    "express": "^5.1.0",
+    "@types/pg": "^8.11.10",
+    "pg": "^8.13.1"
   },
   "devDependencies": {
     "@types/express": "^5.0.3",
+    "@types/node": "^24.0.3",
     "nodemon": "^3.1.10",
+    "pkgroll": "^2.13.1",
     "ts-node": "^10.9.2",
+    "tsx": "^4.20.3",
     "typescript": "^5.8.3"
   }
 }

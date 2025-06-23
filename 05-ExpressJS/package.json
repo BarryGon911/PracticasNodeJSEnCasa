@@ -4,10 +4,9 @@
   "description": "Introducción a ExpressJS",
   "main": "index.js",
   "type": "module",
-  "exports": "./dist/server.js",
   "scripts": {
     "build": "pkgroll",
-    "dev": "nodemon --exec ts-node src/server.ts",
+    "dev": "nodemon src/server.js",
     "start": "node dist/server.js"
   },
   "keywords": [],

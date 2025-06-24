@@ -1,7 +1,7 @@
 {
-  "name": "practica-05",
+  "name": "practica-06",
   "version": "1.0.0",
-  "description": "Introducción a ExpressJS",
+  "description": "Create Read Update Delete (CRUD) with ExpressJS",
   "main": "index.js",
   "type": "module",
   "scripts": {

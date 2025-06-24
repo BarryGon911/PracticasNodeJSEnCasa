@@ -12,6 +12,7 @@
   "author": "BarryGon911",
   "license": "ISC",
   "devDependencies": {
-    "nodemon": "^3.1.10"
+    "nodemon": "^3.1.10",
+    "touch-cli": "^0.0.1"
   }
 }

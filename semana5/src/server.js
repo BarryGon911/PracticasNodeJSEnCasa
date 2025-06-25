@@ -1,11 +1,11 @@
 import express from "express";
 import colors from "colors";
-import "dotenv/config";
 import { logger } from "../src/middlewares/logger.js";
 
 //Importamos la función loadData para cargar los datos al iniciar el servidor y el router de usuarios para manejar las rutas relacionadas con los usuarios.
 import { loadData } from "../src/storage.js";
 import usersRouter from "../src/routes/usersRoutes.js";
+import "dotenv/config";
 
 const port = process.env.PORT || 3000;
 await loadData();
@@ -13,7 +13,7 @@ await loadData();
 const app = express();
 
 // Express debe ser capaz de recibir datos en formato JSON
-app.use(express.json());/
+app.use(express.json());
 
 app.get('/:name', logger, (req, res) => {
   //http://localhost:3000/BarryGon911?isAdmin=true

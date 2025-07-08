@@ -1,10 +1,15 @@
-import express from "express";
+import express from 'express';
+import { loadData } from './src/storage.js';
+import buscarRoutes from './src/routes/buscarRoutes.js';
+import edadRoutes from './src/routes/edadRoutes.js';
+import homeRoutes from './src/routes/homeRoutes.js';
+import perfilRoutes from './src/routes/perfilRoutes.js';
+import productsRoutes from './src/routes/productsRoutes.js';
+import saludoRoutes from './src/routes/saludoRoutes.js';
+import sumaRoutes from './src/routes/sumaRoutes.js';
+import usersRoutes from './src/routes/usersRoutes.js';
 import colors from "colors";
 import "dotenv/config";
-import express from 'express';
-import { logger } from './src/middlewares/logger.js';
-import { loadData } from './src/storage.js';
-import usersRouter from './src/routes/usersRoutes.js';
 
 const PORT = 3000;
 await loadData();

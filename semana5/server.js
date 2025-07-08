@@ -19,7 +19,7 @@ const app = express();
 app.use(express.json());
 
 app.get('/:name', logger, (req, res) => {
-  //http://localhost:3000/Rodrigo?isAdmin=true
+  //http://localhost:3000/Yeriko?isAdmin=true
   if (req.query.isAdmin === 'true') {
     res.end(`Welcome Admin ${req.params.name} to your API`);
   }
